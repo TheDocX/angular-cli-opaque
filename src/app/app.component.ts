@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {WindowRef} from 'angular-cli-opaque-window';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+
+  public constructor(private _window:WindowRef) {
+    console.info('window:', _window);
+  }
 }

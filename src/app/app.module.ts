@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import { WINDOW_PROVIDERS } from 'angular-cli-opaque-window';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -14,7 +16,9 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    WINDOW_PROVIDERS,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
